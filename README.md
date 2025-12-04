@@ -1,23 +1,23 @@
 # GuardianMetrics
 GuardianMetrics is an autonomous metrics-driven agent that continuously monitors system performance, detects anomalies, and executes automated actions to maintain stability. It integrates with Prometheus, Spring Boot Actuator, and custom metric emitters to provide intelligent, real-time operational responses.
 
-## 🚀 Features
+## Features
 
-### 📊 **Metric Collection**
+### **Metric Collection**
 - Reads system and application metrics from:
   - Spring Boot Actuator (`/actuator/prometheus`)
   - Custom metrics (CPU, memory, DB connections, queue sizes, etc.)
   - Oracle DB connection pool insights (HikariCP)
   - Infrastructure or network metrics
 
-### 🧠 **Metrics Intelligence Engine**
+### **Metrics Intelligence Engine**
 - Detects anomalies using:
   - Threshold-based rules
   - PromQL expressions
   - Rolling averages and trends
 - Converts raw metrics into insights
 
-### ⚡ **Automated Actions**
+### **Automated Actions**
 Based on interpretations, SentinelOps can:
 - Restart components  
 - Trigger webhooks (e.g., Slack, WhatsApp, n8n, PagerDuty)  
@@ -26,14 +26,14 @@ Based on interpretations, SentinelOps can:
 - Throttle or disable features  
 - Run custom scripts  
 
-### 🔐 **Secure Architecture**
+### **Secure Architecture**
 - JWT-based authentication  
 - Oracle database for persistence  
 
-### 📈 **Prometheus Integration**
+### **Prometheus Integration**
 - Exposes metrics
 
-# 🔐 **Authentication API**
+# **Authentication API**
 
 ### **POST `/auth/login`**
 Authenticate a user and return a JWT token.
@@ -79,7 +79,7 @@ Response:
   "message": "fakeMetricsDB change"
 }
 
-📈 Prometheus Metrics
+## Prometheus Metrics
 
 GuardianMetrics exposes metrics at:
 
