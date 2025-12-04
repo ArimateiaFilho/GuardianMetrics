@@ -73,9 +73,7 @@ Response:
 GET /change/db
 
 Triggers database-related fake metrics update.
-
 Response:
-
 {
   "status": "ok",
   "message": "fakeMetricsDB change"
@@ -87,7 +85,7 @@ GuardianMetrics exposes metrics at:
 
 GET /actuator/prometheus
 
-##Default Metrics:
+## Default Metrics:
 
 process_cpu_usage
 system_cpu_usage
@@ -99,13 +97,13 @@ http_server_requests_seconds_max
 tomcat_sessions_active_current
 logback_events_total
 
-##Custom Metrics:
+## Custom Metrics:
 
 custom_requests_total
 db_connection_failed
 active_users
 
-##Important:
+## Important:
 The file resources.yaml is a Docker Compose configuration used to start Prometheus, n8n, and Oracle.
 I did not include the application itself because it serves only as an example.
 This project is just a prototype.
