@@ -1,0 +1,40 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, metrics
+  metrics:
+    tags:
+      application: my-demo-app
+  endpoint:
+    prometheus:
+      enabled: true
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/FREEPDB1
+    username: myapp
+    password: mypassword
+    driver-class-name: oracle.jdbc.OracleDriver
+
+    hikari:
+      pool-name: HikariPool-Demo
+      minimum-idle: 5
+      maximum-pool-size: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      auto-commit: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+    show-sql: true
+
+api:
+  security:
+    token:
+      key: "${JWT_SECRET:my-secret-key}"
